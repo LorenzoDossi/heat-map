@@ -1,0 +1,113 @@
+$background: #272727;
+$text-color: #ffffff;
+
+$minus10: #814ee7;
+$temp0: #3f24ec;
+$temp7: #79e87C;
+$temp14: #fbe157;
+$temp21: #ff9737;
+$temp25: #fe3b3b;
+
+$header: 24px;
+$city: 32px;
+$country: 16px;
+$temperature: 18px;
+
+@font-face {
+    font-family: Mohave;
+    src: url(../assets/mohave-light.woff2), url(../assets/mohave-light.woff);
+}
+
+@font-face {
+    font-family: Mohave;
+    font-weight: 700px;
+    src: url(../assets/mohave-bold.woff2), url(../assets/mohave-bold.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Mohave;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: $background;
+    color: $text-color;
+    margin: 160px auto 80px auto;
+    width: 800px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px 24px 48px;
+}
+
+h1 {
+    font-size: $header;
+    font-weight: 700px;
+    margin: 0;
+    width: 300px;
+    background-image: url(../assets/temp.svg);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    padding: 0 0 0 64px;
+}
+
+text {
+    fill: $text-color;
+    text-anchor: end;
+}
+
+text.city {
+    font-size: 32px;
+    font-weight: 700px;
+}
+
+text.temp {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: $header;
+    font-weight: 700;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+circle {
+    fill: $text-color;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+path {
+    stroke: $text-color;
+    stroke-width: 4px;
+    fill: none;
+    transition: .3s opacity;
+}
+
+g.data-point:hover path {
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+g.data-point:hover circle,
+g.data-point:hover text.temp {
+    opacity: 1;
+    transition: .3s opacity;
+}
+
+
+
+
+
+
+

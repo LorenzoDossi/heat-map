@@ -1,0 +1,102 @@
+@font-face {
+  font-family: Mohave;
+  src: url(../assets/mohave-light.woff2), url(../assets/mohave-light.woff);
+}
+
+@font-face {
+  font-family: Mohave;
+  font-weight: 700px;
+  src: url(../assets/mohave-bold.woff2), url(../assets/mohave-bold.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Mohave;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #272727;
+  color: #ffffff;
+  margin: 160px auto 80px auto;
+  width: 800px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 48px 24px 48px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700px;
+  margin: 0;
+  width: 300px;
+  background-image: url(../assets/temp.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  padding: 0 0 0 64px;
+}
+
+text {
+  fill: #ffffff;
+  text-anchor: end;
+}
+
+text.city {
+  font-size: 32px;
+  font-weight: 700px;
+}
+
+text.temp {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+
+circle {
+  fill: #ffffff;
+  opacity: 0;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+
+path {
+  stroke: #ffffff;
+  stroke-width: 4px;
+  fill: none;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+
+g.data-point:hover path {
+  opacity: 0;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+
+g.data-point:hover circle,
+g.data-point:hover text.temp {
+  opacity: 1;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+}
+/*# sourceMappingURL=main.css.map */
